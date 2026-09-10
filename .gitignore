@@ -1,0 +1,69 @@
+# ==========================================
+# MedNexa - Universal Git Ignore Rules
+# ==========================================
+
+# 1. Dependencies
+node_modules/
+*/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 2. Environment Variables & Secrets (CRITICAL for Security)
+.env
+.env.*
+*.env
+!.env.example
+!.env.*.example
+
+# 3. Patient Medical Uploads & Scans (DPDPA 2023 & HIPAA Compliance)
+backend/uploads/*
+!backend/uploads/.gitkeep
+*/uploads/*
+!*/uploads/.gitkeep
+storage/*
+!storage/.gitkeep
+
+# 4. Production Build Outputs & Bundles
+dist/
+dist-ssr/
+build/
+out/
+frontend/dist/
+*.local
+
+# 5. Runtime Logs & Caches
+logs/
+*.log
+.eslintcache
+.cache/
+tmp/
+temp/
+.temp/
+
+# 6. Testing & Coverage Reports
+coverage/
+.nyc_output/
+
+# 7. IDE & Editor Files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.bak
+
+# 8. OS System Files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+/frontend
